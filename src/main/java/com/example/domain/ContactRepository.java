@@ -6,12 +6,12 @@ import java.util.List;
 
 public interface ContactRepository extends CrudRepository<Contact, Long> {
 
-    List<Contact> findByFirstName(String firstName);
+   // List<Contact> findByFirstName(String firstName);
 
     List<Contact> findByLastName(String lastName);
 
-    List<Contact> findByEmailAddress(String emailAddress);
+   // List<Contact> findByEmailAddress(String emailAddress);
 
-    List<Contact> findByFirstNameAndLastName(String firstName, String lastName);
+   // List<Contact> findByFirstNameAndLastName(String firstName, String lastName);
 
 }
