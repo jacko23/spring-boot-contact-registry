@@ -37,6 +37,10 @@ public class Runner implements CommandLineRunner {
         }
         LOGGER.info("");
 
+
+
+
+
         // fetch an individual customer by ID
      /*   Contact contact = contactManager.findOne(1L);
         LOGGER.info("Contact found with findOne(1L):");

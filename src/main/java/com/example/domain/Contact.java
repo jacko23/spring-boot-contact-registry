@@ -1,5 +1,7 @@
 package com.example.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,6 +34,7 @@ public class Contact implements Serializable {
         this.emailAddress = emailAddress;
     }
 
+    @JsonIgnore
     public Long getId() {
         return id;
     }

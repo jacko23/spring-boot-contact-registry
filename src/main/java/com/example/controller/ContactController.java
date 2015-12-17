@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class ContactController {
 
@@ -19,13 +21,10 @@ public class ContactController {
      *
      * get all contacts
      * save a contact
-     *
-     * *** (later) get a contact by firstname and lastname
-     * *** (later) get a contact by email address
      */
 
     @RequestMapping(method = RequestMethod.GET, path="/contacts")
-    public Iterable<Contact> listContacts() {
+    public List<Contact> listContacts() {
 
         return contactManager.listAllContacts();
     }
