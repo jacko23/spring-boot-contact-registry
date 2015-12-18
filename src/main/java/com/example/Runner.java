@@ -1,6 +1,5 @@
 package com.example;
 
-import com.example.domain.Contact;
 import com.example.service.ContactManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +22,7 @@ public class Runner implements CommandLineRunner {
      */
     public void run(String... strings) throws Exception {
 
-        contactManager.addContact(new Contact("Jack", "Bauer", "test@test.com"));
+    /*    contactManager.addContact(new Contact("Jack", "Bauer", "test@test.com"));
         contactManager.addContact(new Contact("Chloe", "O'Brian", "test@test.com"));
         contactManager.addContact(new Contact("Kim", "Bauer", "test@test.com"));
         contactManager.addContact(new Contact("David", "Palmer", "test@test.com"));
@@ -37,7 +36,7 @@ public class Runner implements CommandLineRunner {
         }
         LOGGER.info("");
 
-
+    */
 
 
 
