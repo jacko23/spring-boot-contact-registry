@@ -30,7 +30,7 @@ public class ContactController {
     }
 
 
-    @RequestMapping(method = RequestMethod.POST ,path = "/add")
+    @RequestMapping(method = RequestMethod.POST ,path = "/contacts/add")
     public Contact addContact(@RequestBody Contact contact) {
 
         return contactManager.addContact(contact);

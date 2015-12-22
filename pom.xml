@@ -70,6 +70,22 @@
             <version>1.4.8</version>
             <scope>test</scope>
         </dependency>
+      <!--  <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>react</artifactId>
+            <version>0.12.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>showdown</artifactId>
+            <version>0.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>1.11.2</version>
+        </dependency>-->
+
 
         <dependency>
             <groupId>org.webjars</groupId>
