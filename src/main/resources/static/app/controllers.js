@@ -2,34 +2,28 @@ angular.module('myApp.controllers')
     .controller('AppController',function($scope, ContactFactory) {
 
     ContactFactory.getContactList(function(response) {
-        console.log(response);
         $scope.contacts = response;
-    }); //query() returns all the entries
+    });
 
-   /* $scope.addContact = function(firstName, lastName, emailAddress) {
+    //copy the references (you could clone ie angular.copy but then have to go through a dirty checking for the matches)
+    $scope.displayedcontacts = [].concat($scope.contacts);
 
-        new ContactFactory({
-          firstName: firstName,
-          lastName: lastName,
-          emailAddress: emailAddress
+    $scope.addContact = function(firstName, lastName, emailAddress) {
 
-        }).addContact().save(function(contact) {
+        var data = {
+            "firstName" : firstName,
+            "lastName" : lastName,
+            "emailAddress" : emailAddress
+        }
+
+        ContactFactory.addContact(data, function(contact) {
+            console.log(contact);
             $scope.contacts.push(contact)
         });
+
+        $scope.firstName = "";
+        $scope.lastName = "";
+        $scope.emailAddress = "";
+
     };
-       */
-
-   /* $scope.contactFactory = new ContactFactory(); //You can instantiate resource class
-
-    $scope.contactFactory.data = {"firstName": "Some Name",
-                                   "lastName" : "Some LastName",
-                                    "emailAddress": "some email"};
-
-    var savedContact = ContactFactory.save($scope.contactFactory, function() {
-       console.log(savedContact);
-
-       $scope.savedContact = savedContact;
-
-        //data saved. do something here.
-    }); //saves an entry. Assuming $scope.entry is the Entry object    */
 });
